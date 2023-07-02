@@ -15,6 +15,11 @@
 
 {{ if ne .Lastmod .Date }}{{ partial "dates.html" . }}{{ end -}}
 </div>
+
+{{- if (.Param "comments") }}
+  {{- partial "comments.html" . }}
+{{- end }}
+
 </article>
 </main>
 {{ end }}
